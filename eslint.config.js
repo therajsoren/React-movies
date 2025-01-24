@@ -28,6 +28,7 @@ export default [
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
+      "react/no-unescaped-entities": "off",
       'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': [
         'warn',
@@ -35,6 +36,15 @@ export default [
       ], 
       "react/prop-types": "off", 
       // https://stackoverflow.com/questions/38684925/react-eslint-error-missing-in-props-validation
+
+      // fix react is defined but never used unused-vars
+      'no-unused-vars': [
+        'error',
+        {
+          varsIgnorePattern: '^React$^',
+          argsIgnorePattern: '^-',
+        },
+      ],
     },
   },
 ]

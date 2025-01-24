@@ -32,7 +32,9 @@ export default [
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
-      ],
+      ], 
+      "react/prop-types": "off", 
+      // https://stackoverflow.com/questions/38684925/react-eslint-error-missing-in-props-validation
     },
   },
 ]

@@ -1,18 +1,20 @@
-const Card = () => {
+const Card = ({ title }) => {
   return (
     <div>
-      <h2>Card Component</h2>
+      <h3>{title}</h3>
     </div>
-  )
-}
+  );
+};
+
 const App = () => {
   return (
     <div>
-      <h2>/Functional Arrow Component</h2>
-      <Card />
-      <Card />
-      <Card />
+      <h2>Functional Arrow Component</h2>
+      <Card title="Stars Wars" />
+      <Card title="Avatar" />
+      <Card title="The Lion King" />
     </div>
-  )
-}
-export default App
+  );
+};
+
+export default App;
